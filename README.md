@@ -31,8 +31,8 @@ After successful installation you can access your new Jenkins using your server 
 > Example: sudo nano /var/lib/jenkins/secrets/initialAdminPassword
 
 Jenkins First Time Access Page - Setup setps:
-just click 'continue' for everything :)
-Note: provide your username and password to be in 'create first admin user' page
+***just click 'continue' for everything :D***
+> Note: provide your username and password to be in 'create first admin user' page
 
 
 Jenkins document can be found [here](https://jenkins.io/doc/book/installing)
