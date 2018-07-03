@@ -37,15 +37,11 @@ Jenkins First Time Access Page - Setup setps:
 
 Jenkins document can be found [here](https://jenkins.io/doc/book/installing)
 
-
 System Requirement:
-Minimum hardware requirements:
-	256 MB of RAM
-	1 GB of drive space (although 10 GB is a recommended minimum if running Jenkins as a Docker container)
-
-Recommended hardware configuration for a small team:
-	1 GB+ of RAM
-	50 GB+ of drive space
+| Minimum | Recommended |
+|--|--|
+|256 MB of RAM | 1 GB+ of RAM |
+|1 GB of drive space  | 50 GB+ of drive space |
 
 ---------------------------------------
 
