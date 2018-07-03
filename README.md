@@ -4,8 +4,10 @@ CI/CD Implementation Technical Setup Guide
 Jenkins Installation:
 
 first update/upgrade your packages repo
-- sudo apt-get update -y
-- sudo apt-get upgrade -y
+```sh
+$ sudo apt-get update -y
+$ sudo apt-get upgrade -y
+```
 
 Instll OpenJDK 8:
 - sudo apt-get install openjdk-8-jdk
