@@ -140,7 +140,7 @@ save it and visit your domain/ip. You will see phpinfo page if everything works 
 
 ---------------------------------------------------------------------------------
 
-Jenkins & Bitbucket Configurations/Settings:
+#### Jenkins & Bitbucket Configurations/Settings:
 
 Login in your Jenkins
 - Go to 'Manage Jenkins'
