@@ -2,6 +2,15 @@
 
 CI/CD Implementation Technical Setup Guide
 
+
+What we will be using
+- AWS EC2 Ubuntu 16 (3 instances for Jenkins, Staging and Prod servers)
+- PHP 7.2
+- Nginx
+- Jenkins
+- Bitbucket
+
+
 Jenkins Installation:
 
 first update/upgrade your packages repo
@@ -48,33 +57,49 @@ System Requirement:
 
 
 
-Stage & Prod LEMP Setup:
-- sudo apt-get update -y
-- sudo apt-get upgrade -y
+### Stage & Prod LEMP Setup:
 
-PHP:
-As I prefer to use PHP7.2 (latest) I will be using another repo to pull from.
+packages update for your distro
+```sh
+$ sudo apt-get update -y
+$ sudo apt-get upgrade -y
+```
 
-update python package
-- sudo apt-get install python-software-properties
-- sudo add-apt-repository ppa:ondrej/php -y
-- sudo apt-get update
-- sudo apt-get install PHP7.2-fpm -y
-- install extsions:  sudo apt-get install php7.2-curl php7.2-bcmath php7.2-json php7.2-mbstring php7.2-tidy php7.2-soap php7.2-mysql php7.2-xml php7.2-xmlrpc -y
+PHP Installation:
+As I prefer to use PHP7.2 I will be using another repo to pull from.
+
+Update python package
+```sh
+$ sudo apt-get install python-software-properties
+```
+Add new php repo into our disto and start installation process
+```sh
+$sudo add-apt-repository ppa:ondrej/php -y
+$ sudo apt-get update
+$ sudo apt-get install PHP7.2-fpm -y
+$ sudo apt-get install php7.2-curl php7.2-bcmath php7.2-json php7.2-mbstring php7.2-tidy php7.2-soap php7.2-mysql php7.2-xml php7.2-xmlrpc -y
+```
 
 After running the commands above, apache2 will auto installed. We now have to remove Apache2 as we prefer using Nginx
-- sudo service apache2 stop
-- sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
-- where apache2 (delete the output folder using : sudo rm -rf /usr/bin/apache2)
+```sh
+$ sudo service apache2 stop
+$ sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+$ where apache2 (delete the output folder using : sudo rm -rf /usr/bin/apache2)
+```
 
-Nginx: 
-- sudo apt-get install nginx
+Nginx Installation:
+```sh
+$ sudo apt-get install nginx
+```
 Now, let us hook php-fpm in nginx
-- sudo nano /etc/nginx/sites-available/default 
+```sh
+$ sudo nano /etc/nginx/sites-available/default 
 
+Location section should look something like this or copy and paste it into your default config file.
 location ~ \.php$ {
     include snippets/fastcgi-php.conf;
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
     fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     include fastcgi_params;
 }
+```
