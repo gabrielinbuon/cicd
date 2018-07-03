@@ -102,6 +102,9 @@ location ~ \.php$ {
     fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     include fastcgi_params;
 }
+
+Also make sure Nginx is looking at the .php files as a priority.
+> index index.php index.html index.htm index.nginx-debian.html;
 ```
 
 Now, restart your nginx to finish the LEMP setup process.
