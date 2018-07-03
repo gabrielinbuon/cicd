@@ -143,9 +143,9 @@ save it and visit your domain/ip. You will see phpinfo page if everything works 
 #### Jenkins & Bitbucket Configurations/Settings:
 
 Login in your Jenkins
-- Go to 'Manage Jenkins'
--- Go to 'Manage Plugins'
--- Go to 'Available' and search for Bitbucket, click install
+- Go to 'Manage Jenkins' 
+- Go to 'Manage Plugins' 
+- Go to 'Available' and search for Bitbucket, click install
 
 Generate SSH key in Jenkins server
 switch to jenkins user account
@@ -162,8 +162,8 @@ $ nano .ssh/authorized_keys
 Bitbucket:
 Got to Repository
 - Settings
--- Deployment keys
--- Add Key: "Your copied key here again in the key input field"
+- Deployment keys
+- Add Key: "Your copied key here again in the key input field"
 
 Jenkins: create new Job
 - git your project a name
