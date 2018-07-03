@@ -38,10 +38,10 @@ Jenkins First Time Access Page - Setup setps:
 Jenkins document can be found [here](https://jenkins.io/doc/book/installing)
 
 System Requirement:
-| Minimum | Recommended |
+|  Minimum |  Recommended|
 |--|--|
-|256 MB of RAM | 1 GB+ of RAM |
-|1 GB of drive space  | 50 GB+ of drive space |
+|  256 MB of RAM |  1 GB+ of RAM |
+|  1 GB of drive space  |  50 GB+ of drive space |
 
 ---------------------------------------
 
