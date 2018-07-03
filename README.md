@@ -110,8 +110,18 @@ Also make sure Nginx is looking at .php files as a priority. Should look somethi
 index index.php index.html index.htm index.nginx-debian.html;
 ```
 
-Now, restart your nginx to finish the LEMP setup process.
+Restart your nginx to finish the LEMP setup process.
 ```sh
 $ sudo service nginx restart
 ```
+
+To make sure everything is working fine, you need to create index.php in nginx html folder with the content of phpinfo()
+```sh
+$ sudo nano /var/www/html/index.php
+
+content should look like this
+<?php
+phpinfo();
+```
+save it and visit your domain/ip. You will see phpinfo page if everything works fine.
 ---------------------------------------------------------------------------------
