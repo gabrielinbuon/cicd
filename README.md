@@ -103,8 +103,10 @@ location ~ \.php$ {
     include fastcgi_params;
 }
 
-Also make sure Nginx is looking at the .php files as a priority.
-> index index.php index.html index.htm index.nginx-debian.html;
+Also make sure Nginx is looking at the .php files as a priority. Should look something like this: 
+# Add index.php to the list if you are using PHP
+index index.php index.html index.htm index.nginx-debian.html;
+
 ```
 
 Now, restart your nginx to finish the LEMP setup process.
