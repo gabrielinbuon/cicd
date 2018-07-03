@@ -94,19 +94,20 @@ $ sudo apt-get install nginx
 Now, let us hook php-fpm in nginx
 ```sh
 $ sudo nano /etc/nginx/sites-available/default 
-
+```
 Location section should look something like this or copy and paste it into your default config file.
+```sh
 location ~ \.php$ {
     include snippets/fastcgi-php.conf;
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
     fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     include fastcgi_params;
 }
-
-Also make sure Nginx is looking at the .php files as a priority. Should look something like this: 
+```
+Also make sure Nginx is looking at .php files as a priority. Should look something like this: 
+```sh
 # Add index.php to the list if you are using PHP
 index index.php index.html index.htm index.nginx-debian.html;
-
 ```
 
 Now, restart your nginx to finish the LEMP setup process.
