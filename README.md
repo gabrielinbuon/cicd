@@ -168,7 +168,7 @@ Got to Repository
 Jenkins: create new Job
 - Give your project a name
 - Select 'Free style project'
-- Select 'Git' from 'Source code Management' section and add Repository URL
+- Select 'Git' from 'Source code Management' section and add Repository URL (e.g: ssh://git@bitbucket.org/gabrielinbuon/cicd-training.git)
 - Select 'Build when a change is pushed to Bitbucket' from Build Triggers section
 - Select 'Execute Shell' in Add Build Step section.
 Shell commands are:
