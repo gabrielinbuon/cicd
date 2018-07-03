@@ -139,3 +139,44 @@ phpinfo();
 save it and visit your domain/ip. You will see phpinfo page if everything works fine.
 
 ---------------------------------------------------------------------------------
+
+Jenkins & Bitbucket Configurations/Settings:
+
+Login in your Jenkins
+- Go to 'Manage Jenkins'
+-- Go to 'Manage Plugins'
+---- Go to 'Available' and search for Bitbucket, click install
+
+Generate SSH key in Jenkins server
+switch to jenkins user account
+```sh
+$ sudo su jenkins
+$ ssh-keygen
+$ cat /var/lib/jenkins/.ssh/id_rsa.pub (copy the content to use later)
+```
+Add the pub key in Stage/Prod (be in root user)
+```sh
+$ nano .ssh/authorized_keys
+```
+
+Bitbucket:
+Got to Repository
+- Settings
+-- Deployment keys
+--- Add Key: "Your copied key here again in the key input field"
+
+Jenkins: create new Job
+- git your project a name
+- free style project
+- select git from 'Source code Management'
+-- add Repository URL
+- Build Triggers
+	- Select: Build when a change is pushed to BitBucket
+- Add Build Step:
+	- Execute Shell
+
+	Shell commands are:
+	rsync -vrzhe "ssh -o StrictHostKeyChecking=no" . root@13.232.22.133:/var/www/html
+	ssh root@13.232.22.133 <<EOF
+	  cd /var/www/html
+	EOF
