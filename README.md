@@ -145,7 +145,7 @@ Jenkins & Bitbucket Configurations/Settings:
 Login in your Jenkins
 - Go to 'Manage Jenkins'
 -- Go to 'Manage Plugins'
----- Go to 'Available' and search for Bitbucket, click install
+-- Go to 'Available' and search for Bitbucket, click install
 
 Generate SSH key in Jenkins server
 switch to jenkins user account
@@ -163,7 +163,7 @@ Bitbucket:
 Got to Repository
 - Settings
 -- Deployment keys
---- Add Key: "Your copied key here again in the key input field"
+-- Add Key: "Your copied key here again in the key input field"
 
 Jenkins: create new Job
 - git your project a name
