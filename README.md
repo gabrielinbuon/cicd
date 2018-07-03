@@ -9,14 +9,22 @@ What we will be using
 - Nginx
 - Jenkins
 - Bitbucket
+- Git
+- Composer
 
-
+---------------------------------------------------------------------------------------------------------------
 Jenkins Installation:
 
 first update/upgrade your packages repo
 ```sh
 $ sudo apt-get update -y
 $ sudo apt-get upgrade -y
+```
+
+Install Composer and Git
+```sh
+$ sudo apt-get install composer -y
+$ sudo apt-get install git -y
 ```
 
 Instll OpenJDK 8:
@@ -43,7 +51,6 @@ Jenkins First Time Access Page - Setup setps:
 ***just click 'continue' for everything :D***
 > Note: provide your username and password to be in 'create first admin user' page
 
-
 Jenkins document can be found [here](https://jenkins.io/doc/book/installing)
 
 System Requirement:
@@ -53,7 +60,7 @@ System Requirement:
 |  256 MB of RAM |  1 GB+ of RAM |
 |  1 GB of drive space  |  50 GB+ of drive space |
 
----------------------------------------
+-----------------------------------------------------------------------------------------------------
 
 
 
@@ -63,6 +70,12 @@ packages update for your distro
 ```sh
 $ sudo apt-get update -y
 $ sudo apt-get upgrade -y
+```
+
+Install Composer and Git
+```sh
+$ sudo apt-get install composer -y
+$ sudo apt-get install git -y
 ```
 
 PHP Installation:
