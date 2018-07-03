@@ -103,3 +103,9 @@ location ~ \.php$ {
     include fastcgi_params;
 }
 ```
+
+Now, restart your nginx to finish the LEMP setup process.
+```sh
+$ sudo service nginx restart
+```
+---------------------------------------------------------------------------------
