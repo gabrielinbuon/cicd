@@ -159,11 +159,11 @@ Add the pub key in Stage/Prod (be in root user)
 $ nano .ssh/authorized_keys
 ```
 
-Bitbucket:
+Bitbucket settings:
 Got to Repository
 - Settings
-- Deployment keys
-- Add Key: "Your copied key here again in the key input field"
+- Access Keys - Add Key: "Your copied key here again in the key input field"
+- Webhooks - enter webhook url (e.g: http://13.127.223.130:8080/bitbucket-hook) and select the options 'active' from status and 'Repository push' from triggers.
 
 Jenkins: create new Job
 - Give your project a name
