@@ -11,32 +11,33 @@ $ sudo apt-get upgrade -y
 
 Instll OpenJDK 8:
 ```sh
-- sudo apt-get install openjdk-8-jdk
+$ sudo apt-get install openjdk-8-jdk
 ```
 
 Init Jenkins Installation
 ```sh
-wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install jenkins
+$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+$ sudo apt-get update
+$ sudo apt-get install jenkins
 ```
 
-After successful installation you can access your new Jenkins using your 'YOUR-IP:8080'
-Note: Accessing Jenkins the first time will ask up administrator password to start the setup, use the command and copy the password: sudo nano /var/lib/jenkins/secrets/initialAdminPassword)
+After successful installation you can access your new Jenkins using your server IP: 'YOUR-IP:8080'
 
-Setup setps:
+> Note: 
+> Accessing Jenkins the first time will ask your administrator password to start the setup.
+> You can find from your Jenkins installation directory.
+> Example: sudo nano /var/lib/jenkins/secrets/initialAdminPassword
+
+Jenkins First Time Access Page - Setup setps:
 just click 'continue' for everything :)
 Note: provide your username and password to be in 'create first admin user' page
 
 
-Jenkins document
-Documentation: https://jenkins.io/doc/book/installing/
+Jenkins document can be found [here](https://jenkins.io/doc/book/installing)
 
------------------------------------------------------
 
 System Requirement:
-
 Minimum hardware requirements:
 	256 MB of RAM
 	1 GB of drive space (although 10 GB is a recommended minimum if running Jenkins as a Docker container)
