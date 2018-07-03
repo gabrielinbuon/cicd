@@ -166,17 +166,15 @@ Got to Repository
 - Add Key: "Your copied key here again in the key input field"
 
 Jenkins: create new Job
-- git your project a name
-- free style project
-- select git from 'Source code Management'
--- add Repository URL
-- Build Triggers
-	- Select: Build when a change is pushed to BitBucket
-- Add Build Step:
-	- Execute Shell
-
-	Shell commands are:
-	rsync -vrzhe "ssh -o StrictHostKeyChecking=no" . root@13.232.22.133:/var/www/html
-	ssh root@13.232.22.133 <<EOF
-	  cd /var/www/html
-	EOF
+- Give your project a name
+- Select 'Free style project'
+- Select 'Git' from 'Source code Management' section and add Repository URL
+- Select 'Build when a change is pushed to Bitbucket' from Build Triggers section
+- Select 'Execute Shell' in Add Build Step section.
+Shell commands are:
+```sh
+rsync -vrzhe "ssh -o StrictHostKeyChecking=no" . root@13.232.22.133:/var/www/html
+ssh root@13.232.22.133 <<EOF
+  cd /var/www/html
+EOF
+```
