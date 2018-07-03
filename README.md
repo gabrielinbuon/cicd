@@ -27,7 +27,7 @@ $ sudo apt-get install composer -y
 $ sudo apt-get install git -y
 ```
 
-Instll OpenJDK 8:
+Install OpenJDK 8:
 ```sh
 $ sudo apt-get install openjdk-8-jdk
 ```
