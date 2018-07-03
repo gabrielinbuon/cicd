@@ -74,7 +74,7 @@ $ sudo apt-get install python-software-properties
 ```
 Add new php repo into our disto and start installation process
 ```sh
-$sudo add-apt-repository ppa:ondrej/php -y
+$ sudo add-apt-repository ppa:ondrej/php -y
 $ sudo apt-get update
 $ sudo apt-get install PHP7.2-fpm -y
 $ sudo apt-get install php7.2-curl php7.2-bcmath php7.2-json php7.2-mbstring php7.2-tidy php7.2-soap php7.2-mysql php7.2-xml php7.2-xmlrpc -y
