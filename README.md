@@ -10,13 +10,17 @@ $ sudo apt-get upgrade -y
 ```
 
 Instll OpenJDK 8:
+```sh
 - sudo apt-get install openjdk-8-jdk
+```
 
+Init Jenkins Installation
+```sh
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
-
+```
 
 After successful installation you can access your new Jenkins using your 'YOUR-IP:8080'
 Note: Accessing Jenkins the first time will ask up administrator password to start the setup, use the command and copy the password: sudo nano /var/lib/jenkins/secrets/initialAdminPassword)
