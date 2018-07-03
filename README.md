@@ -124,4 +124,5 @@ content should look like this
 phpinfo();
 ```
 save it and visit your domain/ip. You will see phpinfo page if everything works fine.
+
 ---------------------------------------------------------------------------------
